@@ -1,0 +1,10 @@
+https://blog.naver.com/vega2k
+
+
+1. 아나콘다 설치
+2. pycharm 설치 (jetbrain.com)
+
+3. 쉘에서 pip install "django<2.0"
+4. pip show django (장고 설명보기)
+5. pip list (설치된 패키지 모두 보기)
+6. django-admin --version

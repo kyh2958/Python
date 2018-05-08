@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Django's blog</title>
+</head>
+<body>
+    <div>
+        <h1><a href="/">Hello Django Template</a></h1>
+    </div>
+    <!--
+    <div>
+        <p>Published date : yyyy-mm-dd
+        <h2><a href=""> My first title</a></h2>
+        <p>내용ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+    </div>
+    {{posts}}
+    -->
+    {% for post in posts %}
+    <div>
+        <p>Published date :  {{ post.created_date|date:"Y.m.d h:i" }}
+        <h2><a href="/post/">{{ post.title }}</a></h2>
+        <p> {{ post.text }}</p>
+    </div>
+    {% endfor %}
+
+</body>
+</html>
