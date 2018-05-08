@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Django's blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstraptheme.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" type="text/css">
+    <link ref="stylesheet" href="{% static 'css/blog.css' %}"/>
+</head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Hello Django Template</a></h1>
+    </div>
+    <!--
+    <div>
+        <p>Published date : yyyy-mm-dd
+        <h2><a href=""> My first title</a></h2>
+        <p>내용ㅇㅇㅇㅇㅇㅇㅇㅇㅇ</p>
+    </div>
+    {{posts}}
+    -->
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                <!--
+                {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>Published date :  {{ post.created_date|date:"Y.m.d h:i" }}</p>
+                    </div>
+                    <h2><a href="/post/">{{ post.title }}</a></h2>
+                    <p> {{ post.text }}</p>
+                </div>
+                {% endfor %}
+                -->
+                {% block contents%}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
